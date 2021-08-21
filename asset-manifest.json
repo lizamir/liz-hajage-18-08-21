@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.9b991fb8.chunk.css",
-    "main.js": "/static/js/main.068bf707.chunk.js",
-    "main.js.map": "/static/js/main.068bf707.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.b2001ed4.js",
-    "runtime-main.js.map": "/static/js/runtime-main.b2001ed4.js.map",
-    "static/css/2.68b64559.chunk.css": "/static/css/2.68b64559.chunk.css",
-    "static/js/2.f56fd314.chunk.js": "/static/js/2.f56fd314.chunk.js",
-    "static/js/2.f56fd314.chunk.js.map": "/static/js/2.f56fd314.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.68b64559.chunk.css.map": "/static/css/2.68b64559.chunk.css.map",
-    "static/css/main.9b991fb8.chunk.css.map": "/static/css/main.9b991fb8.chunk.css.map",
-    "static/js/2.f56fd314.chunk.js.LICENSE.txt": "/static/js/2.f56fd314.chunk.js.LICENSE.txt",
-    "static/media/App.scss": "/static/media/Segoe-UI.45472284.ttf",
-    "static/media/blackstar.190d870d.png": "/static/media/blackstar.190d870d.png",
-    "static/media/yellowstar.618d11e1.png": "/static/media/yellowstar.618d11e1.png"
+    "main.css": "/liz-hajage-18-08-21/static/css/main.aaf6e7df.chunk.css",
+    "main.js": "/liz-hajage-18-08-21/static/js/main.068bf707.chunk.js",
+    "main.js.map": "/liz-hajage-18-08-21/static/js/main.068bf707.chunk.js.map",
+    "runtime-main.js": "/liz-hajage-18-08-21/static/js/runtime-main.6e1cb592.js",
+    "runtime-main.js.map": "/liz-hajage-18-08-21/static/js/runtime-main.6e1cb592.js.map",
+    "static/css/2.68b64559.chunk.css": "/liz-hajage-18-08-21/static/css/2.68b64559.chunk.css",
+    "static/js/2.f56fd314.chunk.js": "/liz-hajage-18-08-21/static/js/2.f56fd314.chunk.js",
+    "static/js/2.f56fd314.chunk.js.map": "/liz-hajage-18-08-21/static/js/2.f56fd314.chunk.js.map",
+    "index.html": "/liz-hajage-18-08-21/index.html",
+    "static/css/2.68b64559.chunk.css.map": "/liz-hajage-18-08-21/static/css/2.68b64559.chunk.css.map",
+    "static/css/main.aaf6e7df.chunk.css.map": "/liz-hajage-18-08-21/static/css/main.aaf6e7df.chunk.css.map",
+    "static/js/2.f56fd314.chunk.js.LICENSE.txt": "/liz-hajage-18-08-21/static/js/2.f56fd314.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/liz-hajage-18-08-21/static/media/Segoe-UI.45472284.ttf",
+    "static/media/blackstar.190d870d.png": "/liz-hajage-18-08-21/static/media/blackstar.190d870d.png",
+    "static/media/yellowstar.618d11e1.png": "/liz-hajage-18-08-21/static/media/yellowstar.618d11e1.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.b2001ed4.js",
+    "static/js/runtime-main.6e1cb592.js",
     "static/css/2.68b64559.chunk.css",
     "static/js/2.f56fd314.chunk.js",
-    "static/css/main.9b991fb8.chunk.css",
+    "static/css/main.aaf6e7df.chunk.css",
     "static/js/main.068bf707.chunk.js"
   ]
 }
