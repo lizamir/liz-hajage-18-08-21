@@ -1,0 +1,1 @@
+export { FavoritePreview } from './FavoritePreview'

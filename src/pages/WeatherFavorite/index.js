@@ -1,0 +1,1 @@
+export { WeatherFavorite } from './WeatherFavorite'

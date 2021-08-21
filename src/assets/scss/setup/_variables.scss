@@ -1,0 +1,22 @@
+// COLOR PALETTE
+$clr1: #4d5a76; //text-color
+$clr2: #ebecf0; //group-bgc
+$clr3: #f5f5f7; //task-details-bgc
+$clr4: #f0decb;
+$clr5: #fff;
+$clr6: hsla(0, 0%, 100%, 0.24); //button-bgc without hover
+$clr7: rgba(9, 30, 66, 0.048); // bgc of all btns in task-details
+
+$bclr0: #519839;
+$bclr1: #d9b51c;
+$bclr2: #cd8313;
+$bclr3: #b04632;
+$bclr4: #89609e;
+$bclr5: #055a8c;
+
+// LAYOUT BREAKPOINTS
+// $break-wide: 2000px;
+$break-normal: 1200px;
+$break-medium:900px;
+$break-narrow: 700px;
+$break-mobile: 550px;

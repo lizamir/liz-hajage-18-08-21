@@ -1,0 +1,17 @@
+.weather-details {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 50px;
+
+  .search-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 610px) {
+  .weather-details {
+    margin: 12px 12px;
+  }
+}

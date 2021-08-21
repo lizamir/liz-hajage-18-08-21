@@ -1,0 +1,17 @@
+.search-bar {
+  width: 250px;
+  margin-block-start: 10px;
+
+  .location-option {
+    display: flex;
+    justify-content: center;
+    .flag-pic {
+      margin-inline-end: 5px;
+    }
+  }
+
+  .text-search {
+    color: white;
+    border: white;
+  }
+}
