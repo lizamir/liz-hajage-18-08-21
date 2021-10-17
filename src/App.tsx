@@ -11,7 +11,10 @@ import './App.scss';
 
 function App() {
   const dispatch = useDispatch();
-  const isDarkMode = useSelector((state) => state.isDarkMode);
+  // const isDarkMode = useSelector((state) => state.isDarkMode);
+  const isDarkMode = useSelector(
+    (state: { isDarkMode: boolean }) => state.isDarkMode
+  );
 
   useEffect(() => {
     dispatch(setDarkModeByCurrentTime());
@@ -28,7 +31,6 @@ function App() {
         <Switch>
           <Route component={WeatherFavorite} path="/favorite"></Route>
           <Route component={WeatherDetails} exact path="/"></Route>
-          {/* <Route component={PageNotFound} /> */}
         </Switch>
         <ToastContainer />
       </Router>

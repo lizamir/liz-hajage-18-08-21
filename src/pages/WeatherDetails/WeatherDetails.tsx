@@ -13,14 +13,42 @@ import { WeatherList } from '../../cmps/WeatherList';
 import { CurrentWeather } from '../../cmps/CurrentWeather';
 import { UserLocationBtn } from '../../cmps/UserLocationBtn';
 
-export const WeatherDetails = (props) => {
+interface WeatherState {
+  currentLocation: {
+    Key: string;
+    Type: string;
+    LocalizedName: string;
+    Country: object;
+    id: string;
+  };
+
+  currWeather: object;
+  currFiveDaysForecast: {
+    DailyForecasts: Array<Object>;
+  };
+  favoriteLocations: Array<Type>;
+}
+
+interface Type {
+  Key: string;
+  Type: string;
+  LocalizedName: string;
+  Country: object;
+  id: string;
+}
+
+export const WeatherDetails = () => {
   const dispatch = useDispatch();
-  const currLocation = useSelector((state) => state.currentLocation);
-  const currWeather = useSelector((state) => state.currWeather);
-  const currFiveDaysForecast = useSelector(
-    (state) => state.currFiveDaysForecast
+  const currLocation = useSelector(
+    (state: WeatherState) => state.currentLocation
   );
-  const favoriteLocations = useSelector((state) => state.favoriteLocations);
+  const currWeather = useSelector((state: WeatherState) => state.currWeather);
+  const currFiveDaysForecast = useSelector(
+    (state: WeatherState) => state.currFiveDaysForecast
+  );
+  const favoriteLocations = useSelector(
+    (state: WeatherState) => state.favoriteLocations
+  );
   const isFavorite = favoriteLocations.some(
     (location) => location['Key'] === currLocation.Key
   );
@@ -30,7 +58,7 @@ export const WeatherDetails = (props) => {
     dispatch(getFiveDaysForecast(currLocation.Key));
   }, [currLocation.Key, dispatch]);
 
-  const toggleFavorite = (location, needToRemove) => {
+  const toggleFavorite = (location: Array<Object>, needToRemove: boolean) => {
     if (needToRemove) {
       dispatch(removeFromFavoriteList(location));
     } else {

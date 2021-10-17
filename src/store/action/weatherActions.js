@@ -78,6 +78,7 @@ export const setDarkModeByCurrentTime = () => async dispatch => {
             console.log('got error when try to get your location for dark mode', err)
         }
         navigator.geolocation.getCurrentPosition(geoLocationSuccess, geoLocationError)
+        console.log(navigator.geolocation);
     } catch (err) {
         console.error('get error while try to set mode by current time ', err)
     }

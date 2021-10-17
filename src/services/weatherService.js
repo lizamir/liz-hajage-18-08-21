@@ -58,7 +58,6 @@ async function getFiveDaysForecast(locationCode) {
 async function getGeoLocation(lat, lon) {
     try {
         const response = await axios.get(`${API_WEATHER_URL}/locations/v1/cities/geoposition/search?apikey=${API_KEY}&q=${lat},${lon}`);
-        console.log(response);
         notify('success getting your location')
         return response.data;
     } catch (error) {
