@@ -8,6 +8,8 @@ import blackstar from '../../assets/icons/blackstar.png';
 import yellowstar from '../../assets/icons/yellowstar.png';
 import { makeStyles } from '@material-ui/core/styles';
 
+import { WeatherState } from '../../interface';
+
 const useStyles = makeStyles({
   root: {
     background: '#6F4C5B',
@@ -20,13 +22,13 @@ const useStyles = makeStyles({
 
 export const CurrentWeather = ({
   currWeather,
-  currLocation,
+  currentLocation,
   toggleFavorite,
   isFavorite,
-}) => {
+}: WeatherState) => {
   const classes = useStyles();
-  const isCelsius = useSelector((state) => state.isCelsius);
-  const isDarkMode = useSelector((state) => state.isDarkMode);
+  const isCelsius = useSelector((state: WeatherState) => state.isCelsius);
+  const isDarkMode = useSelector((state: WeatherState) => state.isDarkMode);
   const metricSign = isCelsius ? '°C' : '°F';
   const temperatures = isCelsius
     ? [
@@ -51,7 +53,7 @@ export const CurrentWeather = ({
             variant="h5"
             component="h2"
           >
-            {currLocation.LocalizedName}
+            {currentLocation.LocalizedName}
           </Typography>
           <Typography
             className={`card-typography ${isDarkMode ? 'dark-mode' : ''}`}
@@ -103,7 +105,7 @@ export const CurrentWeather = ({
         {isFavorite ? (
           <Button
             className={classes.root}
-            onClick={() => toggleFavorite(currLocation, true)}
+            onClick={() => toggleFavorite(currentLocation, true)}
             variant="contained"
           >
             <img className="icon-start" src={blackstar} alt="home-icon" />
@@ -111,7 +113,7 @@ export const CurrentWeather = ({
           </Button>
         ) : (
           <Button
-            onClick={() => toggleFavorite(currLocation, false)}
+            onClick={() => toggleFavorite(currentLocation, false)}
             variant="contained"
             className={classes.root}
           >

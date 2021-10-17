@@ -12,30 +12,7 @@ import { SearchBar } from '../../cmps/SearchBar';
 import { WeatherList } from '../../cmps/WeatherList';
 import { CurrentWeather } from '../../cmps/CurrentWeather';
 import { UserLocationBtn } from '../../cmps/UserLocationBtn';
-
-interface WeatherState {
-  currentLocation: {
-    Key: string;
-    Type: string;
-    LocalizedName: string;
-    Country: object;
-    id: string;
-  };
-
-  currWeather: object;
-  currFiveDaysForecast: {
-    DailyForecasts: Array<Object>;
-  };
-  favoriteLocations: Array<Type>;
-}
-
-interface Type {
-  Key: string;
-  Type: string;
-  LocalizedName: string;
-  Country: object;
-  id: string;
-}
+import { WeatherState, Location } from '../../interface';
 
 export const WeatherDetails = () => {
   const dispatch = useDispatch();
@@ -46,11 +23,12 @@ export const WeatherDetails = () => {
   const currFiveDaysForecast = useSelector(
     (state: WeatherState) => state.currFiveDaysForecast
   );
-  const favoriteLocations = useSelector(
-    (state: WeatherState) => state.favoriteLocations
-  );
+  const favoriteLocations = useSelector((state: WeatherState): any => {
+    const { favoriteLocations } = state;
+    return favoriteLocations;
+  });
   const isFavorite = favoriteLocations.some(
-    (location) => location['Key'] === currLocation.Key
+    (location: Location) => location['Key'] === currLocation.Key
   );
 
   useEffect(() => {
@@ -75,7 +53,7 @@ export const WeatherDetails = () => {
       {currWeather && (
         <CurrentWeather
           currWeather={currWeather}
-          currLocation={currLocation}
+          currentLocation={currLocation}
           toggleFavorite={toggleFavorite}
           isFavorite={isFavorite}
         />
